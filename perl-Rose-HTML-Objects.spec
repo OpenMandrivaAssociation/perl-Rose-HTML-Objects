@@ -1,7 +1,7 @@
 %define module	Rose-HTML-Objects
 %define	modprefix Rose
 
-%define version	0.549
+%define version	0.550
 
 %define	rel	1
 %define release	%mkrel %{rel}
@@ -27,6 +27,7 @@ BuildRequires:	perl(Rose::DateTime) >= 0.0133
 BuildRequires:	perl(Rose::Object) >= 0.015
 BuildRequires:	perl(Rose::URI) >= 0.021
 BuildRequires:	perl(Scalar::Util)
+BuildRequires:	perl(Scalar::Defer)
 BuildRequires:	perl(URI::Escape)
 Requires:	perl-Rose-DateTime >= 0.013.3
 Requires:	perl-Rose-Object >= 0.015
