@@ -1,7 +1,7 @@
 %define module	Rose-HTML-Objects
 %define	modprefix Rose
 
-%define version	0.550
+%define version	0.552
 
 %define	rel	1
 %define release	%mkrel %{rel}
