@@ -1,20 +1,16 @@
-%define module	Rose-HTML-Objects
-%define	modprefix Rose
+%define upstream_name	 Rose-HTML-Objects
+%define upstream_version 0.604
 
-%define version	0.603
-
-%define	rel	1
-%define release	%mkrel %{rel}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Object-oriented interfaces for HTML
-Name:		perl-%{module}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
-Url:		http://search.cpan.org/dist/%{module}/
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Rose/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -29,10 +25,13 @@ BuildRequires:	perl(Rose::URI) >= 0.021
 BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(Scalar::Defer)
 BuildRequires:	perl(URI::Escape)
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{reelase}
+
 Requires:	perl-Rose-DateTime >= 0.013.3
 Requires:	perl-Rose-Object >= 0.015
 Requires:	perl-Rose-URI >= 0.021
-BuildArch:	noarch
 
 %description
 The Rose::HTML::Object::* family of classes represent HTML tags, or
@@ -58,7 +57,7 @@ releases may include object representations of other HTML
 tags. Contributions are welcome.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -78,5 +77,4 @@ rm -rf %{buildroot}
 %defattr(644,root,root,755)
 %doc Changes
 %{_mandir}/man*/*
-%{perl_vendorlib}/%{modprefix}
-
+%{perl_vendorlib}/Rose
