@@ -1,5 +1,5 @@
 %define upstream_name	 Rose-HTML-Objects
-%define upstream_version 0.607
+%define upstream_version 0.610
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
