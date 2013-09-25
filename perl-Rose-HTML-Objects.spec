@@ -1,14 +1,14 @@
 %define upstream_name	 Rose-HTML-Objects
-%define upstream_version 0.618
+%define upstream_version 0.619
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.618
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Object-oriented interfaces for HTML
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Rose/Rose-HTML-Objects-0.618.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Rose/Rose-HTML-Objects-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Carp)
@@ -145,5 +145,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri May 19 2006 Scott Karns <scottk@mandriva.org> 0.52-1mdk
 - Initial MDV package
+
 
 
