@@ -72,3 +72,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man*/*
 %{perl_vendorlib}/Rose
 
+
