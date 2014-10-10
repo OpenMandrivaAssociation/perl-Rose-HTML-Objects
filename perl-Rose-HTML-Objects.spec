@@ -2,7 +2,7 @@
 %define upstream_version 0.619
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Object-oriented interfaces for HTML
 License:	Artistic/GPL
