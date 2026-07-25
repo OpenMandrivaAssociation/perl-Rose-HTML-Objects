@@ -1,14 +1,14 @@
 %define upstream_name	 Rose-HTML-Objects
-%define upstream_version 0.619
+%define upstream_version 0.627
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Object-oriented interfaces for HTML
 License:	Artistic/GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Rose/Rose-HTML-Objects-%{upstream_version}.tar.gz
+Url:		https://github.com/siracusa/rose/tree/master/modules/Rose-HTML-Objects
+Source0:	https://cpan.metacpan.org/authors/id/J/JS/JSIRACUSA/Rose-HTML-Objects-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
